@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #353535;
+}
+.main{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .body{
+    height: 812px;
+    width: 375px;
+    background-color: #1E1E1E;
+    border-radius: 39px;
+    display: flex;
+    justify-content: flex-end;
+    
+    flex-direction: column;
+    
+}
+.input .num{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,64px);
+    grid-template-rows: repeat(5,auto);
+    gap: 20px;
+    width: 340px;
+    height: 360px;
+    
+}
+.input  button{
+    all: unset;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* height: 60px; */
+    /* width: 62px; */
+    border-radius: 16px;
+    background-color: #303136;
+    font-size: 25px;
+    color: #29A8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input button:hover {
+  background-color: #616161;
+
+}
+.input .num .btn0{
+    grid-column: span 2;
+
+}
+.input .num .btnEqual{
+    grid-row: span 2;
+    background-color: #29A8FF;
+    color: white;
+}
+.input .num .btnPlus,
+.input .num .btnMinis,
+.input .num .btnMult,
+.input .num .btnDevide{
+
+    background-color: #005DB2;
+    color: white;
+}
+
+.input .num .btnDel,
+.input .num .btnAc{
+    background-color: #616161;
+    color: #A5A5A5;
+
+}
+.input .num .btnDel:hover,
+.input .num .btnAc:hover{
+    background-color: #005DB2;
+}
+.main .area input{
+    all: unset;
+    border: #2a84c0 solid 2px;
+
+    height: 50px;
+    width: 80%;
+    font-size: 30px;
+    color: #29A8FF;
+    background-color: transparent;
+}
+.screen{
+    background-color: #3b3b3b;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    height: 50px;
+    width: 315px;
+    margin: 100px 20px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+.input .num .btnPlus:hover,
+.input .num .btnMinis:hover,
+.input .num .btnMult:hover,
+.input .num .btnDevide:hover,
+.input .num .btnEqual:hover{
+    background-color: #353535;
+    
+}
