@@ -11,9 +11,6 @@ namespace MiniProjet
         public static MySqlCommand cmd;
         public static MySqlDataReader dr;
         public static MySqlConnection cn = new MySqlConnection("server=127.0.0.1;uid=root;pwd=;database=rendi-vous;charset=utf8");
-
-       
-       
         public static void excute(String st)
         {
             try
