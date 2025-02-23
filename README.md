@@ -34,4 +34,36 @@
             }
         }
     }
+            public String st;
+        public MySqlCommand cmd;
+        public MySqlDataReader dr;
+        try
+            {
+                db.cn.Open();
 
+                
+                string st = "SELECT id FROM patient"; 
+
+                cmd = new MySqlCommand(st, db.cn);
+
+                dr = cmd.ExecuteReader();
+
+                cmbPatNum.Items.Clear();
+
+                while (dr.Read())
+                {
+                    cmbPatNum.Items.Add(dr["id"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de la récupération des patients: " + ex.Message);
+            }
+            finally
+            {
+                // Ensure the database connection is always closed
+                if (db.cn.State == ConnectionState.Open)
+                {
+                    db.cn.Close();
+                }
+            }
